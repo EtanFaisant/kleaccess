@@ -37,36 +37,3 @@ function deleteCredential(index) {
     credentials.splice(index, 1);
     saveCredentials(credentials);
 }
-
-
-
-var cast = {
-    "toto": [
-        {
-            "domain": "Kleaccess",
-            "identity": "Titi",
-            "secret": "1234567890"
-        }
-    ]
-}
-
-
-// Presentation layer
-$(document).ready(function () {
-    const listTemplate = $("#credentials-list-template").html();
-
-    const compiledListTemplate = Handlebars.compile(listTemplate);
-    console.log(compiledListTemplate);
-
-    const credentials = getAllCredentials();
-    const listContent = compiledListTemplate(credentials);
-    $("#credentials-list").html(listContent);
-});
-
-
-
-
-
-
-
-
