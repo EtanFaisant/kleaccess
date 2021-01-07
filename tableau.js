@@ -72,3 +72,35 @@ function confirmModify(index) {
    });
 
 }
+
+function confirmAdd() {
+    // Instantiate template & insert it into DOM
+    const template = $("#modal-add-template").html();
+    const compiledTemplate = Handlebars.compile(template);
+    const content = compiledTemplate({credential: {} });
+    $("#modal-container").html(content);
+
+    // Open template
+    let overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+
+    $('#btnClose').on('click', closeModal);
+    function closeModal() {
+        overlay.style.display = 'none';
+    }
+
+    $('#cancel-button').on('click', () => {
+        closeModal();
+    });
+
+    $('#confirm-button').on('click', (event) => {
+        const identity = $(event.target.form.elements.identity).val();
+        const secret = $(event.target.form.elements.secret).val();
+        const domain = $(event.target.form.elements.domain).val();
+        const credential = { identity, secret, domain };
+        createCredential(credential);
+        refresh();
+        closeModal();
+   });
+
+}
