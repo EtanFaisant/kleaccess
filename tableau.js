@@ -1,5 +1,9 @@
 // Presentation layer
 $(document).ready(function () {
+    refresh();
+});
+
+function refresh() {
     const template = $("#credentials-table-template").html();
 
     const compiledTemplate = Handlebars.compile(template);
@@ -7,8 +11,7 @@ $(document).ready(function () {
     const credentials = getAllCredentials();
     const content = compiledTemplate(credentials);
     $("#credentials-table-container").html(content);
-});
-
+}
 
 function confirmDelete(index) {
     // Instantiate template & insert it into DOM
@@ -31,6 +34,41 @@ function confirmDelete(index) {
     });
     $('#confirm-button').on('click', () => {
         deleteCredential(index);
+        refresh();
+        closeModal();
     });
+}
+
+function confirmModify(index) {
+    const credential = retrieveCredential(index);
+
+    // Instantiate template & insert it into DOM
+    const template = $("#modal-modify-template").html();
+    const compiledTemplate = Handlebars.compile(template);
+    const content = compiledTemplate({ index, credential });
+    $("#modal-container").html(content);
+
+    // Open template
+    let overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+
+    $('#btnClose').on('click', closeModal);
+    function closeModal() {
+        overlay.style.display = 'none';
+    }
+
+    $('#cancel-button').on('click', () => {
+        closeModal();
+    });
+
+    $('#confirm-button').on('click', (event) => {
+        const identity = $(event.target.form.elements.identity).val();
+        const secret = $(event.target.form.elements.secret).val();
+        const domain = $(event.target.form.elements.domain).val();
+        const credential = { identity, secret, domain };
+        updateCredential(index, credential);
+        refresh();
+        closeModal();
+   });
 
 }
