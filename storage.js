@@ -11,28 +11,28 @@ function loadCredentials() {
 
 
 // Model layer
-function getAllCredentials() {
+export function getAllCredentials() {
     return loadCredentials();
 }
 
-function createCredential(credential) {
+export function createCredential(credential) {
     let credentials = loadCredentials();
     credentials.push(credential);
     saveCredentials(credentials);
 }
 
-function retrieveCredential(index) {
+export function retrieveCredential(index) {
     let credentials = loadCredentials();
     return credentials[index];
 }
 
-function updateCredential(index, credential) {
+export function updateCredential(index, credential) {
     let credentials = loadCredentials();
     credentials[index] = credential;
     saveCredentials(credentials);
 }
 
-function deleteCredential(index) {
+export function deleteCredential(index) {
     let credentials = loadCredentials();
     credentials.splice(index, 1);
     saveCredentials(credentials);

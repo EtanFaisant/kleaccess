@@ -1,0 +1,23 @@
+{
+  "name": "kleaccess",
+  "version": "0.0.1",
+  "description": "Internship project at Creative Ingénierie for Mathéo Dourneau (@bleathingman) and Ethan FAISANT (@EtanFaisant)",
+  "main": "app.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredericbonnet/kleaccess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredericbonnet/kleaccess/issues"
+  },
+  "homepage": "https://github.com/fredericbonnet/kleaccess#readme",
+  "devDependencies": {
+    "snowpack": "^2.18.5"
+  }
+}
