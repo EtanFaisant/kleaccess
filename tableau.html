@@ -56,6 +56,7 @@
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Username</th>
+
                             <th scope="col">Domain </th>
                             <th> <button onclick="confirmAdd()" class="btn btn-outline-secondary" href="#" role="button">Ajouter un élément<svg width="1.5em"
                                 height="1.5em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor"
@@ -96,7 +97,7 @@
             <div id="card-test" class="card-test">
                 <span id="btnClose" class="btnClose">&times;</span>
                 <form id="updatengativevalidate" class="container ng-pristine ng-invalid ng-touched">
-                    < <div class="row justify-content-md-center mt-6">
+                    <div class="row justify-content-md-center mt-6">
                         <div class="col-7">
                             <div class="card d-block">
                                 <div class="card-body">
@@ -113,7 +114,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <br/>
                                         <div class="form-group">
                                             <label for="password">Mot de passe</label>
                                             <div class="d-flex">
@@ -122,8 +122,8 @@
                                                         autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" inputmode="verbatim">
                                                     <div class="input-group-append">
                                                         <button onclick="ShowHide()" class="btn btn-outline-secondary" href="#" type="button">
-                                                            <img src="bootstrap-icons-1.2.1/eye-slash.svg" width="16" height="16" alt="Bootstrap">
-                                                        </button>
+                                                        <img src="bootstrap-icons-1.2.1/eye-slash.svg" width="16" height="16" alt="Bootstrap">
+                                                    </button>
                                                         <button onclick="copysecret()" class="btn btn-outline-secondary" href="#" type="button">
                                                         <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16" alt="Bootstrap">
                                                     </button>
@@ -131,7 +131,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <br/>
+                                        <br />
                                         <div class="form-group">
                                             <label for="domain">URL</label>
                                             <div class="d-flex">
@@ -153,9 +153,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </form>
             </div>
-            </form>
-        </div>
         </div>
         </div>
     </script>
@@ -164,82 +164,82 @@
         <div id="overlay" class="overlay">
             <div id="card-test" class="card-test">
                 <span id="btnClose" class="btnClose">&times;</span>
-                <form id=u pdatengativevalidate class="container ng-pristine ng-invalid ng-touched ">
-                    <div class="row justify-content-md-center mt-6 ">
-                        <div class="col-7 ">
-                            <div class="card d-block ">
-                                <div class="card-body ">
-                                    <div class="form-group ">
-                                        <label for="identity ">Identifiant</label>
-                                        <div class="d-flex ">
-                                            <div class="input-group mb-3 ">
-                                                <input id="identity " type="text " name="identity " required inputmode="identity " appinputverbatim="false " class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reflect-app-input-verbatim="false " ng-reflect-name="identity "
-                                                    ng-reflect-model autocapitalize="none " autocorrect="none " spellcheck="false " value="{{credential.identity}} ">
-                                                <div class="input-group-append ">
-                                                    <button class="btn btn-outline-secondary " href="# " role="button ">
-                                                    <img src="bootstrap-icons-1.2.1/stickies.svg " width="16 " height="16 "
-                                                        alt="Bootstrap ">
+                <form id="updatengativevalidate" class="container ng-pristine ng-invalid ng-touched">
+                    <div class="row justify-content-md-center mt-6">
+                        <div class="col-7">
+                            <div class="card d-block">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="identity">Identifiant</label>
+                                        <div class="d-flex">
+                                            <div class="input-group mb-3">
+                                                <input id="identity" type="text" name="identity" required inputmode="identity" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reflect-app-input-verbatim="false" ng-reflect-name="identity" ng-reflect-model
+                                                    autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.identity}}">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" href="#" role="button">
+                                                    <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16"
+                                                        alt="Bootstrap">
                                                 </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group ">
-                                            <label for="password ">Mot de passe</label>
-                                            <div class="d-flex ">
-                                                <div class="input-group mb-3 ">
-                                                    <input id="secret " name="secret " required appinputverbatim class="text-monospace form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required ng-reflect-app-input-verbatim ng-reflect-name="password " type="password " ng-reflect-model autocomplete="off "
-                                                        autocapitalize="none " autocorrect="none " spellcheck="false " value="{{credential.secret}} " inputmode="verbatim ">
-                                                    <div class="input-group-append ">
-                                                        <button class="btn btn-outline-secondary " href="# " role="button ">
-                                                        <img src="bootstrap-icons-1.2.1/eye.svg " width="16 " height="16 "
-                                                            alt="Bootstrap ">
+                                        <br/>
+                                        <label for="password">Mot de passe</label>
+                                        <div class="d-flex">
+                                            <div class="input-group mb-3">
+                                                <input id="secret" name="secret" required appinputverbatim class="text-monospace form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required ng-reflect-app-input-verbatim ng-reflect-name="password" type="password" ng-reflect-model autocomplete="off"
+                                                    autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" inputmode="verbatim">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" href="#" role="button">
+                                                        <img src="bootstrap-icons-1.2.1/eye-slash.svg" width="16" height="16"
+                                                            alt="Bootstrap">
                                                     </button>
-                                                        <button class="btn btn-outline-secondary " href="# " role="button ">
-                                                        <img src="bootstrap-icons-1.2.1/stickies.svg " width="16 " height="16 "
-                                                            alt="Bootstrap ">
+                                                    <button class="btn btn-outline-secondary" href="#" role="button">
+                                                        <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16"
+                                                            alt="Bootstrap">
                                                     </button>
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <br />
-                                            <div class="form-group ">
-                                                <label for="domain ">URL</label>
-                                                <div class="d-flex ">
-                                                    <div class="input-group mb-3 ">
-                                                        <input id="domain " type="text " name="domain " required inputmode="domain " appinputverbatim="false " class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reklflect-app-input-verbatim="false " ng-reflect-name="Domain " ng-reflect-model
-                                                            autocapitalize="none " autocorrect="none " spellcheck="false " value="{{credential.domain}} " placeholder="https://example.com " size="30 " required>
-                                                        <div class="input-group-append ">
-                                                            <button class="btn btn-outline-secondary " href="# " role="button ">
-                                                            <img src="bootstrap-icons-1.2.1/stickies.svg " width="16 "
-                                                                height="16 " alt="Bootstrap ">
+                                        </div>
+                                        <br />
+                                        <div class="form-group">
+                                            <label for="domain">URL</label>
+                                            <div class="d-flex">
+                                                <div class="input-group mb-3">
+                                                    <input id="domain" type="text" name="domain" required inputmode="domain" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reklflect-app-input-verbatim="false" ng-reflect-name="Domain" ng-reflect-model
+                                                        autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.domain}}" placeholder="https://example.com" size="30" required>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" href="#" role="button">
+                                                            <img src="bootstrap-icons-1.2.1/stickies.svg" width="16"
+                                                                height="16" alt="Bootstrap">
                                                         </button>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                                <br>
-                                                <button id="confirm-button " type="button " class="btn btn-success ">Valider</button>
-                                                <button id="cancel-button " type="button " class="btn btn-light ">Annuler</button>
                                             </div>
+                                            <br>
+                                            <button id="confirm-button" type="button" class="btn btn-success">Valider</button>
+                                            <button id="cancel-button" type="button" class="btn btn-light">Annuler</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </form>
-                </div>
             </div>
+        </div>
         </div>
     </script>
 
-    <script id="modal-delete-template " type="text/x-handlebars-template ">
-        <div id="overlay " class="overlay ">
-            <div id="card-test " class="card-test ">
-                <form ngativevalidate class="container ng-pristine ng-invalid ng-touched ">
-                    <div class="row justify-content-md-center mt-6 ">
-                        <div class="col-6 ">
-                            <div class="card d-block ">
-                                <div class="card-body ">
-                                    <div class="text-center ">
+    <script id="modal-delete-template" type="text/x-handlebars-template">
+        <div id="overlay" class="overlay">
+            <div id="card-test" class="card-test">
+                <form ngativevalidate class="container ng-pristine ng-invalid ng-touched">
+                    <div class="row justify-content-md-center mt-6">
+                        <div class="col-6">
+                            <div class="card d-block">
+                                <div class="card-body">
+                                    <div class="text-center">
                                         <h5> Supprimer l'élément </h5>
                                         <br />
                                         <h8> Vous voulez vraiment supprimer cet élément ? {{index}}</h8>
@@ -247,9 +247,9 @@
                                         <h9> Cette action est irréversible !</h9>
                                         <br />
                                         <p></p>
-                                        <div class="d-flex ">
-                                            <button id="confirm-button " type="button " class="btn btn-success ">Oui</button>
-                                            <button id="cancel-button " type="button " class="btn btn-light ">Non</button>
+                                        <div class="d-flex">
+                                            <button id="confirm-button" type="button" class="btn btn-success">Oui</button>
+                                            <button id="cancel-button" type="button" class="btn btn-light">Non</button>
                                         </div>
                                     </div>
                                 </div>
@@ -261,10 +261,10 @@
         </div>
     </script>
 
-    <div id="modal-container "></div>
+    <div id="modal-container"></div>
 
-    <script src="storage.js "></script>
-    <script src="tableau.js "></script>
+    <script src="storage.js"></script>
+    <script src="tableau.js"></script>
 </body>
 
 </html>
