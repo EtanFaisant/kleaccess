@@ -10,19 +10,19 @@ window.confirmModify = confirmModify;
 window.confirmDelete = confirmDelete;
 
 const tableModalTemplate = `
-    <table class="table table-striped table-light">
+    <table class="styled-table">
         <thead>
             <tr>
                 <th scope="col"></th>
                 <th scope="col">Username</th>
                 <th scope="col">Domain </th>
-                <th> <button onclick="confirmAdd()" class="btn btn-outline-secondary" href="#" role="button">Ajouter un element<svg width="1.5em"
+                <th> <button onclick="confirmAdd()" class="Addelement" href="#" role="button">Ajouter un element<svg width="1.5em"
                     height="1.5em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                       d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                   </svg></button></th>
-                <th scope="col"></th>
+                
             </tr>
         </thead>
 
@@ -32,7 +32,6 @@ const tableModalTemplate = `
                 <th scope="row">{{@index}}</th>
                 <td>{{identity}}</td>
                 <td>{{domain}}</td>
-
                 <td>
                     <a id="btpopup" class="btn btn-outline-muted" role="button" onclick="confirmModify ({{@index}}); return false">
                         <img src="bootstrap-icons-1.2.1/pencil-square.svg" width="16" height="16" alt="Bootstrap">
@@ -44,7 +43,7 @@ const tableModalTemplate = `
             </tr>
             {{/each}}
         </tbody>
-    </table>
+
 `
 
 export function refresh() {
