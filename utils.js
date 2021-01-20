@@ -31,3 +31,51 @@ export function ShowHide() {
         x.type = "password";
     }
 }
+
+
+
+function getRandomUpperCase() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+function getRandomLowerCase() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+function getRandomSymbol() {
+    var symbol = "!@#$%^&*(){}[]=<>/,.|~?";
+    return symbol[Math.floor(Math.random() * symbol.length)];
+}
+const randomFunc = {
+    upper: getRandomUpperCase,
+    lower: getRandomLowerCase,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+};
+export function randompassword(upper = true, lower = true, number = true, symbol = true, length = 16) {
+    let randompassword = "";
+
+    const typesCount = upper + lower + number + symbol;
+
+    //console.log(typesCount);
+
+    const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(item => Object.values(item)[0]);
+
+    if (typesCount === 0) {
+        return '';
+    }
+
+    for (let i = 0; i < length; i += typesCount) {
+        typesArr.forEach(type => {
+            const funcName = Object.keys(type)[0];
+            randompassword += randomFunc[funcName]();
+        });
+    }
+
+    const finalPassword = randompassword.slice(0, length);
+
+
+    // return finalPassword;
+    document.getElementById("secret").value = finalPassword;
+}
