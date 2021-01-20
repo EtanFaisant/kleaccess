@@ -19,9 +19,8 @@ const addModalTemplate = `
                                             <input id="identity" type="text" name="identity" required inputmode="identity" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reflect-app-input-verbatim="false" ng-reflect-name="identity" ng-reflect-model
                                                 autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.identity}}">
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary" href="#" role="button">
-                                                <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16"
-                                                    alt="Bootstrap">
+                                                <button onclick="copyidentity()" class="btn btn-outline-secondary" href="#" type="button">
+                                                <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16" alt="Bootstrap">
                                             </button>
                                             </div>
                                         </div>
@@ -33,14 +32,15 @@ const addModalTemplate = `
                                             <input id="secret" name="secret" required appinputverbatim class="text-monospace form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required ng-reflect-app-input-verbatim ng-reflect-name="password" type="password" ng-reflect-model autocomplete="off"
                                                 autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" inputmode="verbatim">
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary" href="#" role="button">
-                                                    <img src="bootstrap-icons-1.2.1/eye-slash.svg" width="16" height="16"
-                                                        alt="Bootstrap">
-                                                </button>
-                                                <button class="btn btn-outline-secondary" href="#" role="button">
-                                                    <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16"
-                                                        alt="Bootstrap">
-                                                </button>
+                                                <button onclick="randompassword()" class="btn btn-outline-secondary" href="#" type="button">
+                                                <img src="bootstrap-icons-1.2.1/arrow-repeat.svg" width="16" height="16" alt="Bootstrap">
+                                            </button>
+                                                <button onclick="ShowHide()" class="btn btn-outline-secondary" href="#" type="button">
+                                                <img src="bootstrap-icons-1.2.1/eye.svg" width="16" height="16" alt="Bootstrap">
+                                            </button>
+                                                <button onclick="copysecret()" class="btn btn-outline-secondary" href="#" type="button">
+                                                <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16" alt="Bootstrap">
+                                            </button>
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@ const addModalTemplate = `
                                                 <input id="domain" type="text" name="domain" required inputmode="domain" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reklflect-app-input-verbatim="false" ng-reflect-name="Domain" ng-reflect-model
                                                     autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.domain}}" placeholder="https://example.com" size="30" required>
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" href="#" role="button">
+                                                    <button onclick="copydomain()" class="btn btn-outline-secondary" href="#" role="button">
                                                         <img src="bootstrap-icons-1.2.1/stickies.svg" width="16"
                                                             height="16" alt="Bootstrap">
                                                     </button>

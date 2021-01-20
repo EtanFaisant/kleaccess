@@ -33,6 +33,9 @@ const modifyModalTemplate = `
                                                 <input id="secret" name="secret" required appinputverbatim class="text-monospace form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required ng-reflect-app-input-verbatim ng-reflect-name="password" type="password" ng-reflect-model autocomplete="off"
                                                     autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" inputmode="verbatim">
                                                 <div class="input-group-append">
+                                                    <button onclick="randompassword()" class="btn btn-outline-secondary" href="#" type="button">
+                                                    <img src="bootstrap-icons-1.2.1/arrow-repeat.svg" width="16" height="16" alt="Bootstrap">
+                                                </button>
                                                     <button onclick="ShowHide()" class="btn btn-outline-secondary" href="#" type="button">
                                                     <img src="bootstrap-icons-1.2.1/eye.svg" width="16" height="16" alt="Bootstrap">
                                                 </button>
