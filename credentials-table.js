@@ -34,10 +34,10 @@ const tableModalTemplate = `
                 <td>{{domain}}</td>
                 <td>
                     <a id="btpopup" class="btn btn-outline-muted" role="button" onclick="confirmModify ({{@index}}); return false">
-                        <img src="bootstrap-icons-1.2.1/pencil-square.svg" width="16" height="16" alt="Bootstrap">
+                    <span class="icon"><i class="fas fa-edit"></i></span>
                     </a>
                     <a class="btn btn-outline-muted" onclick="confirmDelete({{@index}}); return false">
-                        <img src="bootstrap-icons-1.2.1/trash.svg" width="16" height="16" alt="Bootstrap">
+                    <span class="icon"><i class="fas fa-trash"></i></span>
                     </a>
                 </td>
             </tr>

@@ -21,7 +21,7 @@ const modifyModalTemplate = `
                                                 autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.identity}}">
                                             <div class="input-group-append">
                                                 <button onclick="copyidentity()" class="btn btn-outline-secondary" href="#" type="button">
-                                                <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16" alt="Bootstrap">
+                                                <span class="icon"><i class="fas fa-copy"></i></span>
                                             </button>
                                             </div>
                                         </div>
@@ -34,13 +34,13 @@ const modifyModalTemplate = `
                                                     autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" inputmode="verbatim">
                                                 <div class="input-group-append">
                                                     <button onclick="randompassword()" class="btn btn-outline-secondary" href="#" type="button">
-                                                    <img src="bootstrap-icons-1.2.1/arrow-repeat.svg" width="16" height="16" alt="Bootstrap">
+                                                    <span class="icon"><i class="fas fa-sync"></i></span>
                                                 </button>
                                                     <button onclick="ShowHide()" class="btn btn-outline-secondary" href="#" type="button">
-                                                    <img src="bootstrap-icons-1.2.1/eye.svg" width="16" height="16" alt="Bootstrap">
+                                                    <span class="icon"><i class="fas fa-eye"></i></span>
                                                 </button>
                                                     <button onclick="copysecret()" class="btn btn-outline-secondary" href="#" type="button">
-                                                    <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16" alt="Bootstrap">
+                                                    <span class="icon"><i class="fas fa-copy"></i></span>
                                                 </button>
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@ const modifyModalTemplate = `
                                                     autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.domain}}" placeholder="https://example.com" size="30" required>
                                                 <div class="input-group-append">
                                                     <button onclick="copydomain()" class="btn btn-outline-secondary" href="#" type="button"> 
-                                                        <img src="bootstrap-icons-1.2.1/stickies.svg" width="16" height="16" alt="Bootstrap">
+                                                    <span class="icon"><i class="fas fa-copy"></i></span>
                                                     </button>
                                                 </div>
                                             </div>
