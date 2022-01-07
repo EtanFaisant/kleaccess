@@ -1,28 +1,35 @@
 // Presentation layer
 
 
-
+// Copier le nom du site
+export function copysitename() {
+    var copyText = document.getElementById("sitename");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+}
+// Copier l'identifient
 export function copyidentity() {
     var copyText = document.getElementById("identity");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
 }
-
+// Copier le mot de passe
 export function copysecret() {
     var copyText = document.getElementById("secret");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
 }
-
+// Copier le nom de dommaine
 export function copydomain() {
     var copyText = document.getElementById("domain");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
 }
-
+// Afficher ou Cacher le mot de passe
 export function ShowHide() {
     var x = document.getElementById("secret");
     if (x.type === "password") {
@@ -33,7 +40,7 @@ export function ShowHide() {
 }
 
 
-
+// Fonction géneration de mot de passe aléatoire
 function getRandomUpperCase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }

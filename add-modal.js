@@ -13,6 +13,19 @@ const addModalTemplate = `
                         <div class="card d-block">
                             <div class="card-body">
                                 <div class="form-group">
+                                <label for="sitename">Nom du Site</label>
+                                    <div class="d-flex">
+                                        <div class="input-group mb-3">
+                                            <input id="sitename" type="text" name="sitename" required inputmode="sitename" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reflect-app-input-verbatim="false" ng-reflect-name="sitename" ng-reflect-model
+                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.sitename}}">
+                                            <div class="input-group-append">
+                                                <button onclick="copysitename()" class="btn btn-outline-secondary" href="#" type="button">
+                                                <span class="icon"><i class="fas fa-copy"></i></span>
+                                            </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <label for="identity">Identifiant</label>
                                     <div class="d-flex">
                                         <div class="input-group mb-3">
@@ -96,13 +109,14 @@ export function confirmAdd() {
     });
 
     $('#confirm-button').on('click', (event) => {
+        const sitename = $(event.target.form.elements.sitename).val();
         const identity = $(event.target.form.elements.identity).val();
         const secret = $(event.target.form.elements.secret).val();
         const domain = $(event.target.form.elements.domain).val();
-        const credential = { identity, secret, domain };
+        const credential = { sitename, identity, secret, domain };
         createCredential(credential);
         refresh();
         closeModal();
-    });
+    });z
 
 }
