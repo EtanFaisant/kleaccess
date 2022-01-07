@@ -109,7 +109,7 @@ body{
 .sidebar ul li a{
   display: block;
   padding: 12px 25px;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #c978ff;
   color: #ffffff;
   transition: all 0.2s ease;
 }
@@ -127,7 +127,12 @@ body{
   letter-spacing: 2px;
 }
 
-.sidebar ul li a:hover{
+.sidebar ul li a span.icon :hover{
+  background: #401386;
+  color: rgb(170, 126, 126);
+}
+
+.sidebar ul li a span.icon :hover{
   background: #401386;
   color: #fff;
 }
@@ -175,6 +180,14 @@ body{
 }
 .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+  font-size: 18px;
+}
+
+.styled-table tbody tr td a {
+  font-size: 16px;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
