@@ -13,8 +13,8 @@ const tableModalTemplate = `
     <table class="styled-table">
         <thead>
             <tr>
-                <th scope="col"></th>
-                <th scope="col">Username</th>
+                <th scope="col">Icons</th>
+                <th scope="col">Sites</th>
                 <th scope="col">Domain </th>
                 <th> <button onclick="confirmAdd()" class="Addelement" href="#" role="button">Ajouter un element<svg width="1.5em"
                     height="1.5em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor"
@@ -29,9 +29,9 @@ const tableModalTemplate = `
         <tbody>
             {{#each this}}
             <tr>
-                <th scope="row">{{@index}}</th>
+                <th scope="row"><i class="fas fa-globe"></i></th>
                 <td>{{identity}}</td>
-                <td>{{domain}}</td>
+                <td class=toto><a href='{{domain}}'>{{domain}}</a></td>
                 <td>
                     <a id="btpopup" class="btn btn-outline-muted" role="button" onclick="confirmModify ({{@index}}); return false">
                     <span class="icon"><i class="fas fa-edit"></i></span>
