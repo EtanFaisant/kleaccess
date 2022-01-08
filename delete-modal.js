@@ -12,17 +12,15 @@ const deleteModalTemplate = `
                     <div class="card d-block">
                         <div class="card-body">
                             <div class="text-center">
-                                <h5> Supprimer l'élément </h5>
+                                <h4> Supprimer l'élément </h4>
                                 <br />
-                                <h8> Vous voulez vraiment supprimer cet élément ? {{index}}</h8>
+                                <h8> Vous voulez vraiment supprimer cet élément ?</h8>
                                 <br />
                                 <h9> Cette action est irréversible !</h9>
                                 <br />
-                                <p></p>
-                                <div class="d-flex">
-                                    <button id="confirm-button" type="button" class="btn btn-success">Oui</button>
-                                    <button id="cancel-button" type="button" class="btn btn-danger">Non</button>
-                                </div>
+                                <br />
+                                <button id="confirm-button" type="button" class="btn btn-success">Confirmer</button>
+                                <button id="cancel-button" type="button" class="btn btn-danger">Annuler</button>
                             </div>
                         </div>
                     </div>

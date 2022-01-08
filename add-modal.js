@@ -17,7 +17,7 @@ const addModalTemplate = `
                                     <div class="d-flex">
                                         <div class="input-group mb-3">
                                             <input id="sitename" type="text" name="sitename" required inputmode="sitename" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reflect-app-input-verbatim="false" ng-reflect-name="sitename" ng-reflect-model
-                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.sitename}}">
+                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.sitename}}" placeholder="Nom du site">
                                             <div class="input-group-append">
                                                 <button onclick="copysitename()" class="btn btn-outline-secondary" href="#" type="button">
                                                 <span class="icon"><i class="fas fa-copy"></i></span>
@@ -30,7 +30,7 @@ const addModalTemplate = `
                                     <div class="d-flex">
                                         <div class="input-group mb-3">
                                             <input id="identity" type="text" name="identity" required inputmode="identity" appinputverbatim="false" class="form-control ng-pristine ng-invalid ng-touched" ng-reflect-required ng-reflect-app-input-verbatim="false" ng-reflect-name="identity" ng-reflect-model
-                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.identity}}">
+                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.identity}}" placeholder="identifiant / email">
                                             <div class="input-group-append">
                                                 <button onclick="copyidentity()" class="btn btn-outline-secondary" href="#" type="button">
                                                 <span class="icon"><i class="fas fa-copy"></i></span>
@@ -43,7 +43,7 @@ const addModalTemplate = `
                                     <div class="d-flex">
                                         <div class="input-group mb-3">
                                             <input id="secret" name="secret" required appinputverbatim class="text-monospace form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required ng-reflect-app-input-verbatim ng-reflect-name="password" type="password" ng-reflect-model autocomplete="off"
-                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" inputmode="verbatim">
+                                                autocapitalize="none" autocorrect="none" spellcheck="false" value="{{credential.secret}}" placeholder="Mot de passe"  inputmode="verbatim">
                                             <div class="input-group-append">
                                                 <button onclick="randompassword()" class="btn btn-outline-secondary" href="#" type="button">
                                                 <span class="icon"><i class="fas fa-sync"></i></span>

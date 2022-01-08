@@ -15,7 +15,7 @@ const tableModalTemplate = `
             <tr>
                 <th scope="col">Icons</th>
                 <th scope="col">Sites</th>
-                <th scope="col">Domain </th>
+                <th scope="col">Domaine</th>
                 <th> <button onclick="confirmAdd()" class="Addelement" href="#" role="button">Ajouter un element<svg width="1.5em"
                     height="1.5em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ const tableModalTemplate = `
         <tbody>
             {{#each this}}
             <tr>
-                <th scope="row"><i class="fas fa-globe"></i></th>
+                <td scope="row"><i class="fas fa-globe"></i></td>
                 <td>{{sitename}}</td>
                 <td><a href='{{domain}}'>{{domain}}</a></td>
                 <td>

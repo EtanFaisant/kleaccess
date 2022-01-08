@@ -1,37 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap");
 
 .overlay {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: none;
-}
-
-.popup {
-    position: relative;
-    bottom: 70px;
-    left: 250px;
-    margin: 10%;
-    width: 50%;
-    background-color: rgb(243, 243, 243);
-    padding: 1em;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
 }
 
 .card-test {
-    position: relative;
-    top: 80px;
+  position: relative;
+  top: 80px;
 }
 
+.card-test h4 {
+  font-weight: bold;
+}
 
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
 
-*{
-  font-family: 'Baloo Paaji 2', cursive;
+* {
+  font-family: "Baloo Paaji 2", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,123 +34,117 @@
   text-decoration: none;
 }
 
-body{
-  background: #f5f5f5;
+body {
+  background: #1f242e;
 }
 
-.top_navbar{
+/* "Start" Top Nav-Bar style */
+.top_navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
   background: #fff;
-  box-shadow: 1px 0 2px rgba(0,0,0,0.125);
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.125);
   display: flex;
   align-items: center;
 }
 
-.top_navbar .logo{
+.top_navbar .logo {
   width: 250px;
   font-size: 25px;
   font-weight: 600;
   padding: 0 25px;
-  color: #401386;
+  color: #293241;
   letter-spacing: 2px;
   text-transform: uppercase;
   border-right: 1px solid #f5f5f5;
 }
 
-.top_navbar .logo span{
+.top_navbar .logo span {
   font-weight: 400;
 }
 
-.top_navbar .menu{
+.top_navbar .menu {
   width: calc(100% - 250px);
   padding: 0 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+/* "End" Top Nav-Bar style */
 
-.top_navbar .hamburger{
+/* "Start" Side bar + bugger menu style */
+.top_navbar .hamburger {
   font-size: 25px;
   cursor: pointer;
-  color: #401386;
+  color: #3d5a80;
 }
 
-.top_navbar .hamburger:hover{
-  color: #401386;
+.top_navbar .hamburger:hover {
+  color: #3d5a80;
 }
 
-
-.hover_collapse .sidebar{
+.hover_collapse .sidebar {
   width: 70px;
 }
 
-.hover_collapse .sidebar ul li a .text{
+.hover_collapse .sidebar ul li a .text {
   display: none;
 }
 
-.sidebar{
+.sidebar {
   position: fixed;
   top: 60px;
   left: 0;
   width: 250px;
   height: 100%;
-  background: #401386;
+  background: #293241;
 }
 
-.sidebar ul li a{
+.sidebar ul li a {
   display: block;
   padding: 12px 25px;
-  border-bottom: 1px solid #c978ff;
+  border-bottom: 1px solid white;
   color: #ffffff;
   transition: all 0.2s ease;
 }
 
-.sidebar ul li a .icon{
+.sidebar ul li a .icon {
   font-size: 18px;
   vertical-align: center;
   transition: background 0.2s ease;
 }
 
-.sidebar ul li a .text{
+.sidebar ul li a .span{
   margin-left: 10px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.sidebar ul li a span.icon :hover{
-  background: #401386;
-  color: rgb(170, 126, 126);
+.click_collapse .sidebar {
+  transition: all 0.3s ease;
 }
+/* "End" Side bar style */
 
-.sidebar ul li a span.icon :hover{
-  background: #401386;
-  color: #fff;
-}
-
-.click_collapse .sidebar{
-  transition: all 0.2s ease;
-}
-
-.main_container{
+/*"start" list elements */
+.main_container {
   margin-top: 60px;
   margin-left: 70px;
   padding: 25px;
   width: calc(100% - 70px);
 }
 
-.main_container .content{
+.main_container .content {
   background: #fff;
   padding: 25px;
   margin-bottom: 25px;
   text-align: justify;
 }
 
-.click_collapse .main_container{
+.click_collapse .main_container {
   width: calc(100% - 250px);
   margin-left: 250px;
   transition: all 0.2s ease;
@@ -165,21 +154,26 @@ body{
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 1.22em;
-  font-family: Verdana;
+  font-family: "Baloo Paaji 2";
   min-width: 550px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
+.styled-table tbody {
+  background-color: #1f242e;
+  color: black;
+  text-align: left;
+}
+
 .styled-table thead tr {
-  background-color: #2a1f3a;
+  background-color: #293241;
   color: #ffffff;
   text-align: left;
 }
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
-}
-.styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  padding: 12px 15px;
+  color: white;
 }
 
 .styled-table tbody tr {
@@ -188,14 +182,11 @@ body{
 
 .styled-table tbody tr td a {
   font-size: 16px;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  color: white;
 }
 
 .styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #401386;
+  border-bottom: 2px solid #293241;
 }
 .styled-table tbody tr.active-row {
   font-weight: bold;
@@ -203,22 +194,70 @@ body{
 }
 
 .Addelement {
-	background-color:#6120ca;
-	border-radius:5px;
-	border:1px solid #7b3fdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:12px;
-	padding:5px 11px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+  background-color: #3d5a80;
+  border-radius: 5px;
+  border: 1px solid #3d5a80;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: "Baloo Paaji 2";
+  font-size: 14apx;
+  padding: 5px 11px;
+  text-decoration: none;
 }
 .Addelement:hover {
-	background-color:#7424f3;
+  background-color: #627691;
+  border: 1px solid #627691;
 }
 .Addelement:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
+/* "End" list elements style */
+
+/* "Start" Popup (add element + modify element) style */
+
+.popup {
+  position: relative;
+  bottom: 70px;
+  left: 250px;
+  margin: 10%;
+  width: 50%;
+  background-color: #1f242e;
+  padding: 1em;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.container .card-test .card-body {
+  background-color: #1f242e;
+  color: white;
+}
+
+.container .card-test .card-body .d-flex #sitename {
+  background-color: #1f242e;
+  color: white;
+}
+
+.container .card-test .card-body .d-flex #identity {
+  background-color: #1f242e;
+  color: white;
+}
+
+.container .card-test .card-body .d-flex #secret {
+  background-color: #1f242e;
+  color: white;
+}
+
+.container .card-test .card-body .d-flex #domain {
+  background-color: #1f242e;
+  color: white;
+}
+
+.card-body .form-group .btn-outline-secondary {
+  background-color: #1f242e;
+  color: #f5f5f5;
+  border-color: #ffffff;
+}
+
+/* "End" Popup style */
