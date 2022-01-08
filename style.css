@@ -190,7 +190,6 @@ body {
 }
 .styled-table tbody tr.active-row {
   font-weight: bold;
-  color: #009879;
 }
 
 .Addelement {
@@ -201,8 +200,9 @@ body {
   cursor: pointer;
   color: white;
   font-family: "Baloo Paaji 2";
-  font-size: 14apx;
+  font-size: 14px;
   padding: 5px 11px;
+  width: max-content;
   text-decoration: none;
 }
 .Addelement:hover {
@@ -212,6 +212,14 @@ body {
 .Addelement:active {
   position: relative;
   top: 1px;
+}
+
+.icon{
+  color: #ffffff;
+}
+
+.icon :hover{
+  color: #627691;
 }
 /* "End" list elements style */
 
