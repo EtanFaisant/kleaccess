@@ -82,6 +82,10 @@ body {
   color: #3d5a80;
 }
 
+.menu-top{
+  text-align: left;
+}
+
 .top_navbar .hamburger:hover {
   color: #3d5a80;
 }
@@ -155,7 +159,7 @@ body {
   margin: 25px 0;
   font-size: 1.22em;
   font-family: "Baloo Paaji 2";
-  min-width: 550px;
+  min-width: 850px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 

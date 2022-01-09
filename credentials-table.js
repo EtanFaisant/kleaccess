@@ -30,8 +30,8 @@ const tableModalTemplate = `
             {{#each this}}
             <tr>
                 <td scope="row"><i class="fas fa-globe"></i></td>
-                <td>{{sitename}}</td>
-                <td><a href='{{domain}}'>{{domain}}</a></td>
+                <td scope="row">{{sitename}}</td>
+                <td scope="row"><a href='{{domain}}'>{{domain}}</a></td>
                 <td>
                     <a id="btpopup" class="btn btn-outline-muted" role="button" onclick="confirmModify ({{@index}}); return false">
                     <span class="icon"><i class="fas fa-edit"></i></span>
